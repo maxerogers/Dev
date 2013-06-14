@@ -1,0 +1,31 @@
+Number of rows: 7
+Number of columns: 5
+Column 0: Name
+1 
+1 Benjamin
+1 Jonathan
+1 Paul
+1 Rosemary
+1 Tom
+Column 1: ID
+1 100
+1 20
+1 40
+1 5
+1 75
+1 95
+Column 2: City
+1 Copenhagen
+1 East Setauket
+2 Ithaca
+1 Kingston
+1 San Francisco
+Column 3: Favorite Fruit
+2 "banana, strawberry"
+1 "blueberry, hawthorn"
+1 "pineapple, mango"
+1 "watermelon, apple"
+1 cherry
+Column 4: 
+5 
+1 x

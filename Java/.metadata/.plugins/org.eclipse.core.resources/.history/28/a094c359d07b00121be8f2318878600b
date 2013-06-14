@@ -1,0 +1,29 @@
+/**
+ * This is my own binary tree
+ * @author max
+ *
+ */
+public class EZBinaryTree 
+{
+	private Node root;
+	public EZBinaryTree(int[] initSequenceArray) 
+	{
+		
+	}
+	
+	public void insert(int x)
+	{
+		if(root == null)
+		{
+		}
+	}
+	public int findSmallestValue(int i, int j)
+	{
+		int result = -1;
+		
+		
+		
+		return result;
+	}
+	
+}

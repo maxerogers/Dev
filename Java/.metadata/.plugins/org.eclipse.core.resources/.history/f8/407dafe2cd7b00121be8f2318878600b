@@ -1,0 +1,29 @@
+/**
+ * This is my own binary tree
+ * @author max
+ *
+ */
+public class EZBinaryTree 
+{
+	private int[] array;
+	public EZBinaryTree(int[] initSequenceArray) 
+	{
+		array = initSequenceArray;
+		array.sort();
+	}
+	public int findSmallestValue()
+	{
+		int result = array[array.length/2];
+		return result;
+	}
+	public void sort()
+	{
+		for(int i=0;i<array.length;i++)
+		{
+			for(int j=0;j<array.length;i++)
+			{
+				
+			}
+		}
+	}
+}

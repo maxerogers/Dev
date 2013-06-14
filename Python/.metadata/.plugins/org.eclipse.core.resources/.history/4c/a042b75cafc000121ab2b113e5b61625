@@ -1,0 +1,14 @@
+'''
+Created on May 19, 2013
+
+@author: max
+'''
+
+def main():
+    A = "photograph "
+    B = "tomography "
+    matrix = []
+    for i in range(A.len()):
+        matrix.append([])
+        for j in range(B.len()):
+main()

@@ -1,0 +1,53 @@
+Place the answers to required questions in this text file.
+
+
+Ex1:
+What happens at Line 1?
+a 4 int long array was allocated with 'a' acting as the array pointer for it
+b is pointer to a 16byte long memory block
+c is pointer set to 0
+
+What happens at Line 2?
+c is set to point to a aka a[0]
+the array a is incremented through the for loop
+c[0] aka c is set to 200
+
+What happens at Line 3?
+c[1] aka a[1] is set to 300
+*(c+2) aka c[2] aka a[2] is set to 301 
+3[c] aka c[3] is set to 302 (similar to MIPS assembly 12($t0))
+
+what happens at Line 4?
+C is incremented up so it no longer points to a[0] it now points to a[1]
+thus a[1] is now 400
+
+what happens at Line 5?
+here is when things get messed up. 
+because c gets cast as a char pointer, c + 1 doesn't move it 4 spaces.
+It moves only one space. thus corrupting both a[1] and a[2]
+
+what happens at Line 6?
+b is set to point to a[1] aka 0x...eb10
+c is being assigned to an invalid address again. this time it starts at a[0]
+s location then it moved up one byte. thats why it goes from 0x...b0c to 0x...b0d
+
+Ex2:
+DONE
+Ex3:
+DONE
+Ex4:
+1) What is happening at line 515?
+	(cmpl $(NR_syscalls), %eax)
+	It is comparing the value eax to the syscall numbers 
+2) The six registers closest to the esp and what system call argument they store
+	0: restart_syscall
+	1: exit
+	2: fork
+	3: read
+	4: write
+	5: open
+	6: close
+
+Ex5:
+
+Ex6:

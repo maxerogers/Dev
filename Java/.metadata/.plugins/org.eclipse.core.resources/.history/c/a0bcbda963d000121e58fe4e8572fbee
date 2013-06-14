@@ -1,0 +1,14 @@
+/**
+ * This class's purpose is to manage both the inbox(incoming messages) and the outbox(the outgoing messages)
+ * 
+ */
+public class MailBox 
+{
+	private int PORTNUMBER = 9405;
+	private Inbox inbox;
+	private Outbox outbox;
+	MailBox()
+	{
+		inbox = new Inbox(PORTNUMBER);
+	}
+}

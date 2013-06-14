@@ -1,0 +1,8 @@
+
+public class Pigeon
+{
+	Socket capsule;
+	Pigeon(){
+		
+	}
+}

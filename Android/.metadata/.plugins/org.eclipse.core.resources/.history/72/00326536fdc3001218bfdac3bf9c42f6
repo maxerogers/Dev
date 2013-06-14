@@ -1,0 +1,7 @@
+package com.ez.sneakbot;
+
+import android.view.SurfaceView;
+
+public class DrawingPanel extends SurfaceView{
+
+}

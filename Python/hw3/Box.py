@@ -1,0 +1,12 @@
+##This class will hold 6 elements 
+
+class Box:
+    count = 0
+    elements = []
+    __init__():
+    add(X):
+        if(count > 5):
+            return false
+        else:
+            elemenets.insert(count,X)
+            count += 1

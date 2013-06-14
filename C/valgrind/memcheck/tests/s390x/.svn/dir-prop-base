@@ -1,0 +1,15 @@
+K 10
+svn:ignore
+V 60
+.deps
+Makefile
+Makefile.in
+cs
+csg
+cds
+cdsg
+cu21
+cu42
+ltgjhe
+
+END

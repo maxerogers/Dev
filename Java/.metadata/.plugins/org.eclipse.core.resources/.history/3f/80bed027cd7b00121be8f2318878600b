@@ -1,0 +1,12 @@
+/**
+ * This is my own binary tree
+ * @author max
+ *
+ */
+public class EZBinaryTree {
+
+	public EZBinaryTree(int[] initSequenceArray) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

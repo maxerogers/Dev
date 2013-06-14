@@ -1,0 +1,20 @@
+/**
+ * This is my own binary tree
+ * @author max
+ *
+ */
+public class EZBinaryTree 
+{
+	private int[] array;
+	public EZBinaryTree(int[] initSequenceArray) 
+	{
+		array = initSequenceArray;
+	}
+	public int findSmallestValue(int i, int j)
+	{
+		int zergling1 = array[i];
+		int zergling2 = array[j];
+		int result = zergling1;
+		
+	}
+}

@@ -1,0 +1,20 @@
+package com.example.littleblind;
+
+public class Card 
+{
+	private static final String[] paths =
+		{ 
+		"2_of_clubs.png",
+		"2_of_clubs.png",
+		"2_of_clubs.png",
+		"2_of_clubs.png",
+		"2_of_clubs.png",
+		"2_of_clubs.png",
+		"2_of_clubs.png",
+		"2_of_clubs.png",
+		"2_of_clubs.png",
+		"2_of_clubs.png",
+		"red_joker.png",
+		"black_joker.png"
+		};
+}

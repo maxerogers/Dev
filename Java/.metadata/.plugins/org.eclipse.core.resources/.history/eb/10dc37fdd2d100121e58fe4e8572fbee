@@ -1,0 +1,16 @@
+import java.io.IOException;
+
+/**
+ * This class's purpose is to manage both the inbox(incoming messages) and the outbox(the outgoing messages)
+ * 
+ */
+public class PigeonMan implements Runnable 
+{
+	private static final int PORTNUMBER = 9405;
+	private Roost roost;
+	
+	public void run()
+	{
+		
+	}
+}

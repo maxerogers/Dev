@@ -1,0 +1,8 @@
+package com.ez.sneakbot;
+
+public class PanelThread extends Thread
+{
+	 private SurfaceHolder _surfaceHolder;
+     private DrawingPanel _panel;
+     private boolean _run = false;
+}

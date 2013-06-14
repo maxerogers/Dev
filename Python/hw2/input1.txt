@@ -1,0 +1,7 @@
+Name	ID	City	Favorite Fruit
+Paul	95	East Setauket	"blueberry, hawthorn"
+Benjamin	5	Copenhagen	kiwi
+Tom	100	Kingston	"watermelon, apple"
+Rosemary	20	Philadelphia	"pineapple, mango"
+Jonathan	75	Ithaca	cherry
+Kathryn	40	San Francisco	"banana, strawberry"

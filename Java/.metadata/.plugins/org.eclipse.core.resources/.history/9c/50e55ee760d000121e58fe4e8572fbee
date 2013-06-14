@@ -1,0 +1,7 @@
+import java.util.ArrayList;
+
+
+public class Outbox 
+{
+	private ArrayList<Socket> sockets;
+}

@@ -1,0 +1,14 @@
+The output from this file should look like:
+
+14
+
+14
+
+1
+4
+1
+SEMANTIC ERROR
+2
+2
+ged
+ab

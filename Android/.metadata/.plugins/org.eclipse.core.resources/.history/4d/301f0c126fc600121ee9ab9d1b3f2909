@@ -1,0 +1,128 @@
+package com.example.littleblind;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.util.Log;
+import android.view.View;
+
+public class RenderView extends View
+{
+	int[][] hand1 = {{0,700}, {100,700}, {200,700}, {300,700}, {400,700}};
+	int[][] hand2 = {{0,0}, {100,0}, {200,0}, {300,0}, {400,0}};
+	int[][] hand3 = {{0,150}, {0,250}, {0,350}, {0,450}, {0,550}};
+	int[][] hand4 = {{300,150}, {300,250}, {300,350}, {300,450}, {300,550}};
+	Context context;
+     Bitmap[] cardFaces = new Bitmap[12];
+     //Bitmap[] cardFaces = new Bitmap[52];
+     private static final String[] paths =
+    		{ 
+ 		"2_of_clubs.png",
+ 		"3_of_clubs.png",
+ 		"4_of_clubs.png",
+ 		"5_of_clubs.png",
+ 		"6_of_clubs.png",
+ 		"7_of_clubs.png",
+ 		"8_of_clubs.png",
+ 		"9_of_clubs.png",
+ 		"10_of_clubs.png",
+ 		"jack_of_clubs.png",
+ 		"queen_of_clubs.png",
+ 		"king_of_clubs.png",
+ 		"ace_of_clubs.png",
+ 		"2_of_diamonds.png",
+ 		"3_of_diamonds.png",
+ 		"4_of_diamonds.png",
+ 		"5_of_diamonds.png",
+ 		"6_of_diamonds.png",
+ 		"7_of_diamonds.png",
+ 		"8_of_diamonds.png",
+ 		"9_of_diamonds.png",
+ 		"10_of_diamonds.png",
+ 		"jack_of_diamonds.png",
+ 		"queen_of_diamonds.png",
+ 		"king_of_diamonds.png",
+ 		"ace_of_diamonds.png",
+ 		"2_of_hearts.png",
+ 		"3_of_hearts.png",
+ 		"4_of_hearts.png",
+ 		"5_of_hearts.png",
+ 		"6_of_hearts.png",
+ 		"7_of_hearts.png",
+ 		"8_of_hearts.png",
+ 		"9_of_hearts.png",
+ 		"10_of_hearts.png",
+ 		"jack_of_hearts.png",
+ 		"queen_of_hearts.png",
+ 		"king_of_hearts.png",
+ 		"ace_of_hearts.png",
+ 		"2_of_spades.png",
+ 		"3_of_spades.png",
+ 		"4_of_spades.png",
+ 		"5_of_spades.png",
+ 		"6_of_spades.png",
+ 		"7_of_spades.png",
+ 		"8_of_spades.png",
+ 		"9_of_spades.png",
+ 		"10_of_spades.png",
+ 		"jack_of_spades.png",
+ 		"queen_of_spades.png",
+ 		"king_of_spades.png",
+ 		"ace_of_spades.png",
+ 		"red_joker.png",
+ 		"black_joker.png"
+ 		};
+
+     public RenderView(Context context) {
+         super(context);
+         this.context = context;
+     }
+     private void loadHandCards()
+     {
+         try {
+             AssetManager assetManager = context.getAssets();
+             Log.d("Path Length:",""+paths.length);
+             for(int i=0;i<15;i++)
+             {
+            	 InputStream inputStream = assetManager.open(paths[i]);
+                 cardFaces[i] = BitmapFactory.decodeStream(inputStream);
+                 inputStream.close();
+                 Log.d("BitmapText"+i,
+                         paths[i]+" format: " + cardFaces[i].getConfig());
+             }
+         } catch(Exception e){
+        	 Log.d("Exception: ",e.printStackTrace());
+     	} finally {
+             // we should really close our input streams here.
+         }
+     }
+     protected void onDraw(Canvas canvas) {
+     	canvas.drawRGB(0, 0, 0);
+         //canvas.drawBitmap(bob565, null, dst, null);
+     	loadHandCards();
+     	canvas.drawBitmap(cardFaces[0], hand2[0][0], hand2[0][1], null);
+     	canvas.drawBitmap(cardFaces[1], hand2[1][0], hand2[1][1], null);
+     	canvas.drawBitmap(cardFaces[2], hand2[2][0], hand2[2][1], null);
+     	canvas.drawBitmap(cardFaces[3], hand2[3][0], hand2[3][1], null);
+     	canvas.drawBitmap(cardFaces[4], hand2[4][0], hand2[4][1], null);
+     	
+     	canvas.drawBitmap(cardFaces[5], hand1[0][0], hand1[0][1], null);
+     	canvas.drawBitmap(cardFaces[6], hand1[1][0], hand1[1][1], null);
+     	canvas.drawBitmap(cardFaces[7], hand1[2][0], hand1[2][1], null);
+     	canvas.drawBitmap(cardFaces[8], hand1[3][0], hand1[3][1], null);
+     	canvas.drawBitmap(cardFaces[9], hand1[4][0], hand1[4][1], null);
+     	
+     	canvas.drawBitmap(cardFaces[10], hand3[0][0], hand3[0][1], null);
+     	canvas.drawBitmap(cardFaces[11], hand3[1][0], hand3[1][1], null);
+     	canvas.drawBitmap(cardFaces[12], hand3[2][0], hand3[2][1], null);
+     	canvas.drawBitmap(cardFaces[13], hand3[3][0], hand3[3][1], null);
+     	canvas.drawBitmap(cardFaces[14], hand3[4][0], hand3[4][1], null);
+         invalidate();
+     }
+}

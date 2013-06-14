@@ -1,0 +1,26 @@
+package com.example.littleblind;
+
+import java.util.ArrayList;
+
+public class Hand 
+{
+	private ArrayList<Card> hand;
+	Hand()
+	{
+		hand = new ArrayList<Card>();
+	}
+	public void addCard(Card c)
+	{
+		hand.add(c);
+	}
+	public Card popCard()
+	{
+		Card temp = hand.get(hand.size()-1);
+		hand.remove(hand.size()-1);
+		return temp;
+	}
+	public Card getCard(int i)
+	{
+		return hand.get(i);
+	}
+}

@@ -1,0 +1,120 @@
+
+##Author:Max Rogers
+##Assignment: Hw3
+##Problem: Bui/Users/max/Desktop/Programming/Python/hw3/Unit.pyld a 6x6 sudoku solving program that returns a solved game after taking 
+##in a path parameter for the input txt file
+##
+##The format for the input txt file should be 
+##
+##2 1 - - 4 3
+##- - - - - -
+##- - 6 2 - -
+##- - 3 4 - -
+##- - - - - -
+##3 4 - - 5 6
+##where '-' means empty
+##
+
+##Imports
+import sys
+
+class SudokuSolver:
+	grid = []
+	test = []
+	cursor = 0
+	cursorValue = 1
+	def __init__(self,grid):
+		self.grid = grid
+		for i in range(0,6):
+			for j in range(0,6):
+				self.test.append(self.grid[i*6+j])
+				
+	def lookAtRow(self):
+		boolean = True
+		rowCursor = self.cursor - self.cursor%6
+		for k in range(0,6):
+			if(self.cursorValue == self.test[rowCursor+k]):
+				boolean = False
+				break
+		return boolean
+		
+	def lookAtCol(self):
+		boolean = True
+		colCursor = 0
+		for colCursor in range(0,6):
+			if(self.cursorValue == self.test[colCursor*6+self.cursor%6]):
+				boolean = False
+				break
+		return boolean	
+		
+	def lookAtBlock(self):
+		boolean = True
+		blockCursor = self.cursor/6
+		if(blockCursor%2 != 0):
+			blockCursor -= 1
+		blockCursor *= 6
+		if(self.cursor%6 > 2):
+			blockCursor += 3
+		blockCursor = int(blockCursor)
+		for k in range(0,3):
+			if(self.cursorValue == self.test[blockCursor+6+k]):
+				boolean = False
+				break
+			if( self.cursorValue == self.test[blockCursor+k]):
+				boolean = False
+				break
+		return boolean
+		
+	def findSolution(self):
+		#brute force through the list of elements
+		while(self.cursor != 36):
+			if(self.lookAtRow() & self.lookAtCol() & self.lookAtBlock()):
+				self.test[self.cursor] = self.cursorValue
+				self.cursorValue = 1
+				self.cursor += 1
+			elif(self.cursorValue >= 6):
+				self.cursor -= 1
+				self.cursorValue = self.test[self.cursor] + 1
+			else:
+				self.cursorValue += 1
+		self.grid = self.test
+		return self.grid
+		
+##main function
+def main(argv):
+	##gets the filename
+	fileName = argv[1]
+	outputName = "output.txt"
+	grid = [] 
+	count = 0
+	output = ""
+	##read input
+	f = open(fileName,"r")
+	for line in f:
+		#print (line)
+		line = line.rstrip()
+		temp = line.split(" ")
+		for i in range(0,6):
+			val = -1
+			if(temp[i] != '-'):
+				grid.append(temp[i])
+				#print (i)
+			else:
+				grid.append(0)	
+		count += 1
+	#buildSquareGrid
+	sSolver = SudokuSolver(grid)
+	#findSolution		
+	grid = sSolver.findSolution()
+	##write output
+	for i in range(0,6):
+		result = ""
+		for j in range(0,6):
+			result += str(grid[i*6+j])
+			result += " "
+		print(result)
+		result += "\n"
+		output += result
+	f = open(outputName,"w")
+	f.write(output)
+main(sys.argv)

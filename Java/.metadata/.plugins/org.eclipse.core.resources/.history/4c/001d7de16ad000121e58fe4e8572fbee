@@ -1,0 +1,12 @@
+import java.io.IOException;
+
+/**
+ * This class's purpose is to manage both the inbox(incoming messages) and the outbox(the outgoing messages)
+ * 
+ */
+public class PigeonMan 
+{
+	private int PORTNUMBER;
+	private Roost roost;
+	PigeonMan(){}
+}

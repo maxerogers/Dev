@@ -1,0 +1,34 @@
+public class BubbleSurfaceView extends SurfaceView  
+                               implements SurfaceHolder.Callback {
+  // Variables go here
+  BubbleThread thread;
+  public BubbleSurfaceView(Context context) {
+    // Constructor as before, with additional lines:
+	ctx = context;
+    setFocusable(true); // make sure we get key events
+  }
+	
+  public BubbleThread getThread() {
+    return thread;
+  }
+  public void surfaceCreated(SurfaceHolder holder) {
+    thread = new BubbleThread(sh, ctx, new Handler());
+    thread.setRunning(true);
+    thread.start();
+  }
+  public void surfaceChanged(SurfaceHolder holder, int format, int width,
+			int height) 	  {      
+    thread.setSurfaceSize(width, height);
+  }
+  public void surfaceDestroyed(SurfaceHolder holder) {
+    boolean retry = true;
+    thread.setRunning(false);
+    while (retry) {
+      try {
+        thread.join();
+        retry = false;
+      } catch (InterruptedException e) {
+      }
+    }
+  }
+}

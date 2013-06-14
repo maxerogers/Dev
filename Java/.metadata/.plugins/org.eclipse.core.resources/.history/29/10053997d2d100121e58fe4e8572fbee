@@ -1,0 +1,30 @@
+import java.net.*;
+import java.util.ArrayList;
+import java.io.*;
+
+public class Roost implements Runnable
+{  private ServerSocket     server = null;
+   private Pigeon			client = null;
+   private ArrayList<Pigeon> clients = null;
+   private boolean isOn = false;
+   public Roost(int port)
+   {  try
+      { 
+	   clients = new ArrayList<Pigeon>();
+	   	System.out.println("Binding to port " + port + ", please wait  ...");
+         server = new ServerSocket(port);  
+         System.out.println("Server started: " + server);
+         isOn = true;
+         run();
+      }
+      catch(IOException ioe)
+      {  System.out.println(ioe); }
+   }
+   public void run()
+   {
+	   while(isOn)
+	   {
+		   
+	   }
+   }
+}

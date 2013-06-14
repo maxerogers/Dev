@@ -1,0 +1,172 @@
+!SESSION 2013-02-07 19:16:27.921 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.6.0_37
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/max/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/max/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-02-07 19:16:52.629
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2013-02-07 19:16:53.082
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-07 19:16:53.082
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5b9d2de4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2c3002b9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY br.usp.ime.prolog 4 0 2013-02-07 19:17:16.004
+!MESSAGE Problems executing prolog interpreter.
+ Prolog interpreter path may be incorrect! Check the 'Prolog Preferences'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Exception occurred executing command line.
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:842)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:811)
+	at br.usp.ime.prolog.launch.PrologLaunchConfigurationDelegate.launch(PrologLaunchConfigurationDelegate.java:122)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/bin/prolog": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:460)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:509)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:836)
+	... 7 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:53)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:453)
+	... 10 more
+!SUBENTRY 1 org.eclipse.debug.core 4 125 2013-02-07 19:17:16.006
+!MESSAGE Exception occurred executing command line.
+!STACK 0
+java.io.IOException: Cannot run program "/usr/bin/prolog": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:460)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:509)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:836)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:811)
+	at br.usp.ime.prolog.launch.PrologLaunchConfigurationDelegate.launch(PrologLaunchConfigurationDelegate.java:122)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:53)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:453)
+	... 10 more
+
+!ENTRY br.usp.ime.prolog 4 0 2013-02-07 19:19:59.219
+!MESSAGE Problems executing prolog interpreter.
+ Prolog interpreter path may be incorrect! Check the 'Prolog Preferences'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Exception occurred executing command line.
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:842)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:811)
+	at br.usp.ime.prolog.launch.PrologLaunchConfigurationDelegate.launch(PrologLaunchConfigurationDelegate.java:122)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/max/Programming/Prolog/XSB": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:460)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:509)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:836)
+	... 7 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:53)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:453)
+	... 10 more
+!SUBENTRY 1 org.eclipse.debug.core 4 125 2013-02-07 19:19:59.219
+!MESSAGE Exception occurred executing command line.
+!STACK 0
+java.io.IOException: Cannot run program "/max/Programming/Prolog/XSB": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:460)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:509)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:836)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:811)
+	at br.usp.ime.prolog.launch.PrologLaunchConfigurationDelegate.launch(PrologLaunchConfigurationDelegate.java:122)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:53)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:453)
+	... 10 more
+
+!ENTRY br.usp.ime.prolog 4 0 2013-02-07 19:20:36.671
+!MESSAGE Problems executing prolog interpreter.
+ Prolog interpreter path may be incorrect! Check the 'Prolog Preferences'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Exception occurred executing command line.
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:842)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:811)
+	at br.usp.ime.prolog.launch.PrologLaunchConfigurationDelegate.launch(PrologLaunchConfigurationDelegate.java:122)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/max/Programming/Prolog/XSB/bin/xsb": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:460)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:509)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:836)
+	... 7 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:53)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:453)
+	... 10 more
+!SUBENTRY 1 org.eclipse.debug.core 4 125 2013-02-07 19:20:36.672
+!MESSAGE Exception occurred executing command line.
+!STACK 0
+java.io.IOException: Cannot run program "/max/Programming/Prolog/XSB/bin/xsb": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:460)
+	at java.lang.Runtime.exec(Runtime.java:593)
+	at java.lang.Runtime.exec(Runtime.java:509)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:836)
+	at org.eclipse.debug.core.DebugPlugin.exec(DebugPlugin.java:811)
+	at br.usp.ime.prolog.launch.PrologLaunchConfigurationDelegate.launch(PrologLaunchConfigurationDelegate.java:122)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:53)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:453)
+	... 10 more

@@ -1,0 +1,13 @@
+import java.net.Socket;
+import java.util.ArrayList;
+
+
+public class Outbox impliments Runnable
+{
+	private ArrayList<Socket> sockets;
+	public Outbox()
+	{
+		
+	}
+	public close()
+}

@@ -1,0 +1,19 @@
+-- VERSION_3
+-- START DISKCACHE
+/Users/max/Desktop/Programming/Python/.metadata/.plugins/org.eclipse.core.resources/.projects/MaxGraphs/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+MaxGraph|0|/Users/max/Desktop/Programming/Python/MaxGraphs/src/MaxGraph.py
+MaxTest|0|/Users/max/Desktop/Programming/Python/MaxGraphs/src/MaxTest.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=MaxGraph
+-- END DICTIONARY
+-- START TREE 1
+1
+max|1|MaxGraph!9@
+-- END TREE
+-- START TREE 2
+1
+__i|1|__init__!1&10@
+-- END TREE

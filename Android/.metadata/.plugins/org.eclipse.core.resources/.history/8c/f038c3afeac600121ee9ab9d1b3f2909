@@ -1,0 +1,12 @@
+package com.example.littleblind;
+
+import java.util.ArrayList;
+
+public class Hand 
+{
+	private ArrayList<Card> hand;
+	Hand()
+	{
+		hand = new ArrayList<Card>();
+	}
+}

@@ -1,0 +1,15 @@
+package com.ez.sneakbot;
+
+import android.content.Context;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+
+public class DrawingPanel extends SurfaceView implements SurfaceHolder.Callback{
+
+	public DrawingPanel(Context context) {
+		super(context);
+		getHolder().addCallback(this);
+	}
+	
+	
+}

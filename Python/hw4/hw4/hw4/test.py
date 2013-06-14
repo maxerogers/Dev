@@ -1,0 +1,78 @@
+
+##Author: Max Rogers
+##ID: 107979405
+##Assignment: HW4
+##Goal:
+##	build a language parser that takes the input txt and generates the correct
+## output.txt
+
+#imports
+import sys #used for terminal python command arguments
+import math #
+import operator # 
+import string #
+import tpg #this is the toy parser package. used to parse the incoming text and assign them the proper commands
+
+#Test Input
+#1 - 2 +3 WORKS
+#1 2 3 need to add syntax error catch
+#42 + "Green" Semantic error catch
+#1-(2+3) WORKS
+#"Hello"+""+"World."
+#[1.2,3][1] + 40 (Add Array support)
+#3 xor 5 DOESNT WORK
+
+##Things to add:
+	#AND,OR,XOR (x,y)
+	#NOT	(x)
+	# <,>,== (x,y)
+	#a[b]	(x,y) array indexing
+	#() parenthesize
+##Operations
+def make_op(op):
+	return {
+			'+': lambda x,y: x+y,
+			'-': lambda x,y: x-y,
+			'*': lambda x,y: x*y,
+			'/': lambda x,y: x/y,
+			'%': lambda x,y: x%y,	
+		}[op]
+class TheLanguage(tpg.Parser):
+	r"""
+		separator space	'\s+' ;
+		token number: '\d+' int;
+		token add	'[+-]'	make_op ;
+		token mul	'[*/%]' make_op ;
+		token pow	'^|\*\*'	make_op	;
+		START/e -> Term/e 
+				| Stringy/e;
+		Term/t -> Fact/t ( add/op Fact/f $t=op(t,f)$ )* ;
+		Fact/f -> Pow/f ( mul/op Pow/a $f=op(f,a)$ )* ;
+		Atom/a -> number/a 
+				| '\(' Term/a '\)' ;
+		Stringy/s -> '\"
+	"""
+#Good old Main function
+def main(argv):
+	print ("HW4 (TPG Parser for 'The Language')")
+	#now reading in file
+	fileName = argv[1]
+	f = open(fileName, "r")
+	fileName = "output.txt"
+	outputText = ""
+	lang = TheLanguage()
+	for line in f:
+		try:
+			outputText += str(lang(line))+"\n"
+		except Exception:
+			errorText = str(tpg.exc())
+			if "SyntacticError" in errorText:
+				outputText += "Syntactic Error"+"\n"
+			if "LexicalError" in errorText:
+				outputText += "Lexical Error"+"\n"
+	#now write output
+	f.close()
+	f = open(fileName,"w")
+	f.write(outputText)
+	f.close() 
+main(sys.argv)

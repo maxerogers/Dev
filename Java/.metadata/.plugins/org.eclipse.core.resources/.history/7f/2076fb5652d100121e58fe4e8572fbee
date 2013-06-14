@@ -1,0 +1,11 @@
+import java.net.Socket;
+
+
+public class Pigeon extends Thread
+{
+	Socket capsule;
+	
+	Pigeon(Socket s){
+		capsule = s;
+	}
+}

@@ -1,0 +1,24 @@
+import java.net.Socket;
+import java.util.ArrayList;
+
+
+public class Outbox implements Runnable
+{
+	private ArrayList<Socket> sockets;
+	public Outbox()
+	{
+		
+	}
+	public closeAll()
+	{
+		for(int i=0;i<sockets.size();i++)
+		{
+			
+		}
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+}

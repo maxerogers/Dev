@@ -1,0 +1,53 @@
+import java.util.Random;
+
+
+public class Main {
+	/**
+	3-11. [5] Suppose that we are given as sequence of n values x1,....xn and seek to
+			quickly answer repeated queries of the form: given i and j, find the smallest value in xi,...,xj.
+			(a) Design a data structure that uses O(n2) space and answers queries in O(1) time.
+			(b) Design a data structure that uses O(n) space and answers queries in O(log n) time. For partial credit, your data structure can use O(n log n) space and have O(log n) query time.
+	
+	*/
+	public static void main(String[] args)
+	{
+		//EZBinaryTree ezbt = new EZBinaryTree(initSequenceArray(100));
+		//makeMinHeap(initSequenceArray(100));
+		int [] array = initSequenceArray(10);
+		for(int i=0;i<array.length;i++)
+		{
+			System.out.println(array[i]);
+		}
+	}
+	public static void makeMinHeap(int[] array)
+	{
+		for(int i=array.length/2;i>0;i--)
+		{
+			minHeapify(array,array.length,i);
+		}
+	}
+	
+	public static void minHeapify(int[] array,int size, int index)
+	{
+		int left = 2*index;
+		int right = 2*index+1;
+		int mix;
+		if(left<size)
+		{
+			
+		}else{
+			mix
+		}
+	}
+	
+	public static int[] initSequenceArray(int n)
+	{
+		Random rand = new Random();
+		int[] array = new int[n];
+		for(int i=0;i<n;i++)
+		{
+			array[i] = rand.nextInt() * 100;
+		}
+		return array;
+	}
+}

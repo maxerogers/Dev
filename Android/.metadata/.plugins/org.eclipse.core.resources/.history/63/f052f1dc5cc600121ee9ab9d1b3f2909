@@ -1,0 +1,12 @@
+package com.example.littleblind;
+
+public class Card 
+{
+	private static final String[] =
+		{ 
+		"10_of_clubs"
+		"10_of_diamonds"
+		"10_of_hearts"
+		
+		}
+}

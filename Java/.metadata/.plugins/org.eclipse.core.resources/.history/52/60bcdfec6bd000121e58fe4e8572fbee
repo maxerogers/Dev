@@ -1,0 +1,42 @@
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Stack;
+
+/**
+ * This class handles incoming messages to this user
+ * @author max
+ *
+ */
+public class Roost implements Runnable
+{
+	private boolean isOn = true;
+	private ArrayList<Socket> pigeons;
+	private ServerSocket newArrivals;
+	public Roost(int portnumber) throws IOException {
+		newArrivals = new ServerSocket(portnumber);
+		pigeons = new ArrayList<Socket>();
+	}
+	@Override
+	public void run() {
+		while(isOn)
+		{
+			Socket newPigeon = null;
+			try {
+				newPigeon = newArrivals.accept();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if(newPigeon != null)
+			{
+				pigeons.add(newPigeon);
+			}
+			for(int i=0;i<pigeons.size();i++)
+			{
+				pigeons.get(i).
+			}
+		}
+	}
+}

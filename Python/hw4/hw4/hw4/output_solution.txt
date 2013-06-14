@@ -1,0 +1,9 @@
+The output from this file should look like:
+
+2
+SYNTAX ERROR
+SEMANTIC ERROR
+-4
+'Hello World'
+42
+6

@@ -1,0 +1,12 @@
+package com.ez.sneakbot;
+
+import android.view.SurfaceHolder;
+
+public class PanelThread extends Thread
+{
+	 private SurfaceHolder _surfaceHolder;
+     private DrawingPanel _panel;
+     private boolean _run = false;
+     
+     
+}
