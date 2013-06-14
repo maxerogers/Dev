@@ -1,0 +1,81 @@
+//
+//  main.cpp
+//  BinaryReversal
+//
+//  Created by Max Rogers on 5/30/13.
+//  Copyright (c) 2013 Max Rogers. All rights reserved.
+//
+// So this programs job is to take in input from the user,
+// Convert that integer into a binary representation
+// And then reverse it
+//
+// This verion's method will be to:
+// First, convert int into a int[] holding a binary digit in each index
+// Second, to reverse that order to produce a string that is reversed binary number
+//
+
+
+#include <iostream>
+#include <string.h>
+#include <vector>
+using namespace std;
+
+int* turnToBinary(int input, int *l);
+string turnToBinaryString(int* v);
+void printArray(int *input, int* l)
+{
+    for(int i=0;i<*l;i++)
+    {
+        cout << input[i] << ", ";
+    }
+    cout<<endl;
+}
+
+int main(int argc, const char * argv[])
+{
+    int l;
+    int *length = &l;
+    cout << "Binary Reversal" << endl;
+    int x = 13;
+    cout << x << " is the input" << endl;
+    int* v = turnToBinary(x, length);
+    printArray(v, length);
+    string y = turnToBinaryString(v);
+    cout << x << " is " << y << " in binary";
+    return 0;
+}
+//
+// The method to conversion here is to first identify the largest power of two needed
+// then used that power to determine the size of the array
+// then place values into the array elements
+//
+int* turnToBinary(int input, int *l)
+{
+    int x = 1;
+    int y = 1;
+    do { //using this to calcuate the size of the int[] if input = 13 then x should be 16 and y should be 5
+        x *= 2;
+        y++;
+    } while (input > x);
+    int *result = (int *)malloc(y * sizeof(int));
+    // now we initialize the array elements
+    l = &y;
+    for(int i=y-1;i>=0;i--)
+    {
+        if(input >= x)
+        {
+            result[i] = 1;
+            input -= x;
+        }else{
+            result[i] = 0;
+        }
+        x /= 2;
+    }
+    return result;
+}
+
+string turnToBinaryString(int* v)
+{
+    string result = "";
+    return result;
+}
