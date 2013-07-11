@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<h1>Cropping Avatar</h1>
+<br/>
+<%= image_tag @user.avatar.url(:large), id: "cropbox" %>
+<h4>Preview</h4>
+<div style="width:100px; height:100px; overflow:hidden">
+  <%= image_tag @user.avatar.url(:large), :id => "preview" %>
+</div>
+
+<%= form_for @user do |f| %>
+  <% %w[x y w h].each do |attribute| %>
+    <%= f.text_field "crop_#{attribute}" %><br/>
+  <% end %>
+  <div class="actions">
+    <%= f.submit "Crop" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', users_path %>

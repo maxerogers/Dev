@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+<h1><%= @user.avatar.url %> </h1>
+<%= image_tag("images/missing.png" ) %>
+<hr>
+<%= image_tag @user.avatar.url(:large) %>
+<hr>
+<%= image_tag @user.avatar.url(:small) %>
+<hr>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
